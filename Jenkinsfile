@@ -7,7 +7,11 @@ pipeline {
             //avec python_venv_pytest image python améliorée comportant pytest en plus
         }
     }
-
+environment{
+	dockerhub_credential_id='credential_dockerhub_didierdefrance69'
+	docker_registry= 'https://registry.hub.docker.com'
+	docker_image_name='didierdefrance69/python_mensualite_api:1'
+}
     stages {
         //stage('from_git') {
         //    steps {
@@ -26,5 +30,21 @@ pipeline {
 			     sh 'pytest -s test_mensualite.py'
 			}
         }
+	stage('build_docker_image') {
+		steps {
+script{
+dockerImage = docker.build(docker_image_name)
+}
+}
+}
+stage('push_docker_image') {
+steps {
+script{
+docker.withRegistry( docker_registry, dockerhub_credential_id ) {
+dockerImage.push()
+}
+}
+}
+}
     }
 }
