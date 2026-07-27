@@ -1,0 +1,9 @@
+1) créer quelquepart (ex: /mnt/c/tp/tp-wsl-git/with-github) un répertoire python_jenkins_2026
+2) copier dans ce répertoire le contenu de la sous partie 2026/partie_python du référentiel 
+   https://github.com/didier-tp/devOpsSeptembre2024 (à clone dans un répertoire temporaire)
+3) toutes les commandes nécessaires pour envoyer cela sur GitHub
+   ….
+4) récupérer cela dans pipeline Jenkins
+5) construction python avec:
+     - test unitaire 
+     - ...
