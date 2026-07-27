@@ -1,0 +1,8 @@
+* Soit "pipelineScript" directement dans console Jenkins (admin)
+
+* Soit contenu du pipeline dans fichier Jenkinsfile (sans extension , même pas .txt) à la racine du référentiel git
+  avec configuration:
+     "pipeline script" from SCM
+     SCM=git
+     Repository URL=https://github.com/didier-tp/python_jenkins_2026 (ou autre)
+     Branch specifier : */main (souvent à la place de */master)
