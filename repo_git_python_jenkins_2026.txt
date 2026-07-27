@@ -2,7 +2,12 @@
 2) copier dans ce répertoire le contenu de la sous partie 2026/partie_python du référentiel 
    https://github.com/didier-tp/devOpsSeptembre2024 (à clone dans un répertoire temporaire)
 3) toutes les commandes nécessaires pour envoyer cela sur GitHub
-   ….
+   git init, git add * , git commit -m initial
+   git remote add origin https://github.com/didier-tp/python_jenkins_2026.git
+      avec https://github.com/didier-tp/python_jenkins_2026.git créer via console et compte github
+   git remote set-url origin https://didier-tp:valeur_du_jeton@github.com/didier-tp/python_jenkins_2026.git
+      avec gvaleur_du_jeton token créé via console GitHub pour accéder au référentiel python_jenkins_2026 en contents/read_write pendant 90 jours
+   git push -u origin main
 4) récupérer cela dans pipeline Jenkins
 5) construction python avec:
      - test unitaire 
